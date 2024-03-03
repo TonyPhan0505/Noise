@@ -48,7 +48,7 @@ https://youtu.be/Kznytx29l8w?si=doCaI28aGoK9ncdH
 <img width="416" alt="moment" src="https://github.com/TonyPhan0505/Noise/assets/87828913/7121cec7-a2bc-4d97-8237-c04f5c125ecb">
 
 #### 4. Profile screen:
-<img width="413" alt="profile" src="https://github.com/TonyPhan0505/Noise/assets/87828913/6af9415a-b366-40ad-964b-61194546627e"
+<img width="413" alt="profile" src="https://github.com/TonyPhan0505/Noise/assets/87828913/6af9415a-b366-40ad-964b-61194546627e">
 
 #### 5. Create story:
 <img width="415" alt="create_story" src="https://github.com/TonyPhan0505/Noise/assets/87828913/f4dc79af-21bf-47dd-8d80-12569802c43e">
