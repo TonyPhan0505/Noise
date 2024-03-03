@@ -336,6 +336,7 @@ export default function SignUpScreen({ navigation }) {
                         setSelectedMedia={setSelectedAvatar}
                     />
                 </View>
+                <Text style={styles.reminder}>Make sure to check your email address carefully.</Text>
                 <TouchableOpacity 
                     onPress={submit}
                     style={styles.createAccountButton}
@@ -402,11 +403,17 @@ const styles = {
         width: width * 0.8
     },
 
+    reminder: {
+        fontSize: width * 0.03,
+        color: Colors.smokeyWhite,
+        marginTop: 50,
+        marginBottom: 10
+    },
+
     createAccountButton: {
         width: width * 0.8,
         height: width * 0.12,
         backgroundColor: Colors.white,
-        marginTop: 50,
         marginBottom: 120,
         borderRadius: 10,
         alignItems: "center",

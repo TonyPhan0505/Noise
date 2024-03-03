@@ -16,7 +16,8 @@ module.exports = (emailAddress) => {
     const code = generateVerificationCode();
     sendEmail(
         emailAddress,
-        "Verification",
+        "Account Verification",
         `Hello,\n\nYour verification code is ${code}.\n\nBest regards,\nNoise`
     );
+    return code;
 };
