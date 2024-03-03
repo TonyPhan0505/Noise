@@ -1,0 +1,17 @@
+backend/node_modules/
+backend/.env
+backend/node_modules
+
+frontend/node_modules/
+frontend/.expo/
+
+dist/
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+.DS_Store
