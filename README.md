@@ -38,34 +38,35 @@ https://youtu.be/Kznytx29l8w?si=doCaI28aGoK9ncdH
 # Screenshots:
 
 #### 1. Login and sign up:
-<img width="419" alt="Screenshot 2023-07-14 at 4 08 05 PM" src="https://github.com/TonyPhan0505/Noise/assets/87828913/862befc1-5286-4efb-91c5-0e6418da6ac8">
-<img width="416" alt="Screenshot 2023-07-14 at 4 08 24 PM" src="https://github.com/TonyPhan0505/Noise/assets/87828913/1da45f68-dce7-433f-a284-96fc27d2426b">
+<img width="419" alt="sign_in" src="https://github.com/TonyPhan0505/Noise/assets/87828913/0449c7b0-3ddb-49b1-8aa2-337f0271abd5">
+<img width="416" alt="sign_up" src="https://github.com/TonyPhan0505/Noise/assets/87828913/434d2358-ddca-46c9-9c6e-8af2448ff1f0">
 
 #### 2. Feed screen (composed of activities which belong to those the user follows):
-<img width="415" alt="Screenshot 2023-07-14 at 4 15 12 PM" src="https://github.com/TonyPhan0505/Noise/assets/87828913/e9d9ed52-2a7b-4541-a0c6-ec1dcb8b13e3">
+<img width="415" alt="feedscreen" src="https://github.com/TonyPhan0505/Noise/assets/87828913/241de874-609a-4a25-a19e-afd7bd45da6c">
 
 #### 3. Create moment screen (a moment is exactly like a story in Facebook/Instagram):
-<img width="416" alt="Screenshot 2023-07-14 at 4 16 03 PM" src="https://github.com/TonyPhan0505/Noise/assets/87828913/44fcb5c5-2775-47f5-ab97-7df05f3732aa">
+<img width="416" alt="moment" src="https://github.com/TonyPhan0505/Noise/assets/87828913/7121cec7-a2bc-4d97-8237-c04f5c125ecb">
 
 #### 4. Profile screen:
-<img width="413" alt="Screenshot 2023-07-14 at 4 16 36 PM" src="https://github.com/TonyPhan0505/Noise/assets/87828913/cd872993-69dd-4f3a-a97f-a501422d22a1">
+<img width="413" alt="profile" src="https://github.com/TonyPhan0505/Noise/assets/87828913/6af9415a-b366-40ad-964b-61194546627e"
 
 #### 5. Create story:
-<img width="415" alt="Screenshot 2023-07-14 at 4 17 38 PM" src="https://github.com/TonyPhan0505/Noise/assets/87828913/b5404e72-b8f6-46ce-85a8-a00365034ded">
+<img width="415" alt="create_story" src="https://github.com/TonyPhan0505/Noise/assets/87828913/f4dc79af-21bf-47dd-8d80-12569802c43e">
 
 #### 6. Comment:
-<img width="418" alt="Screenshot 2023-07-14 at 4 24 24 PM" src="https://github.com/TonyPhan0505/Noise/assets/87828913/557bef62-a22c-4889-b2c2-2bee1018ccf6">
+<img width="418" alt="comment" src="https://github.com/TonyPhan0505/Noise/assets/87828913/e8cdba75-1eb1-4553-a71b-840c52da8bc8">
 
 #### 7. See anyone's activities:
-<img width="418" alt="Screenshot 2023-07-14 at 4 24 51 PM" src="https://github.com/TonyPhan0505/Noise/assets/87828913/bcd716cf-24ae-4f22-8641-d27392ea08f5">
-<img width="416" alt="Screenshot 2023-07-14 at 4 25 30 PM" src="https://github.com/TonyPhan0505/Noise/assets/87828913/955e5ad4-7c6d-43c4-869c-1fd6cf095842">
+<img width="418" alt="activities1" src="https://github.com/TonyPhan0505/Noise/assets/87828913/8ecfcb34-20d8-4e08-9ccd-bb2f72529cc7">
+<img width="416" alt="activities2" src="https://github.com/TonyPhan0505/Noise/assets/87828913/07687e6c-a5a4-4c3e-b840-182f4214cab6">
 
 #### 8. Story (composed of posts. A user use many posts to tell a story):
-<img width="416" alt="Screenshot 2023-07-14 at 4 25 58 PM" src="https://github.com/TonyPhan0505/Noise/assets/87828913/22456f49-ee33-4801-82f5-78a13b823b55">
-<img width="420" alt="Screenshot 2023-07-14 at 4 29 08 PM" src="https://github.com/TonyPhan0505/Noise/assets/87828913/3cf10e75-cf71-4450-abc3-6b440ddb1239">
+<img width="416" alt="stories1" src="https://github.com/TonyPhan0505/Noise/assets/87828913/93b758f9-bb0e-4129-ab7c-a7ccd2de6121">
+<img width="420" alt="stories2" src="https://github.com/TonyPhan0505/Noise/assets/87828913/c51b33b7-9433-4f78-9aeb-e543379aa629">
 
 #### 9. Trophy (a user adds trophies to showcase their achievements in a journey):
-<img width="413" alt="Screenshot 2023-07-14 at 4 27 19 PM" src="https://github.com/TonyPhan0505/Noise/assets/87828913/4a1783d0-000e-4b11-b82e-1e8dd3147836">
+<img width="413" alt="trophy" src="https://github.com/TonyPhan0505/Noise/assets/87828913/89da9dc2-b7cf-4888-8ceb-bb604a1bcbb2">
 
 #### 10. Notifications:
-<img width="412" alt="Screenshot 2023-07-14 at 4 26 24 PM" src="https://github.com/TonyPhan0505/Noise/assets/87828913/a8075d15-d311-4d5a-b62d-6ed324fa36eb">
+<img width="412" alt="notifications" src="https://github.com/TonyPhan0505/Noise/assets/87828913/a588e654-af84-4083-8b04-0d9a9d779313">
+
