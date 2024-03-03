@@ -8,7 +8,7 @@ function generateVerificationCode() {
     for (let _ = 0; _ < 6; _++) {
         combination = shuffle.shuffleString(combination); 
     }
-    const code = combination.substring(0, 7);
+    const code = combination.substring(0, 6);
     return code;
 }
 
