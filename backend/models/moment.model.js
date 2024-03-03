@@ -46,11 +46,6 @@ const MomentSchema = new Schema({
         required: true,
         default: []
     },
-    mediaTypes: {
-        type: [String],
-        required: true,
-        default: []
-    },
     comments: {
         type: [String],
         required: true,

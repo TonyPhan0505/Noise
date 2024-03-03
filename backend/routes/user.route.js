@@ -26,7 +26,6 @@ router.route('/searchMoreUsersWithInterestX')
 
 router.route('/doesUserExist')
 .post(
-    authenticationController.authenticate,
     userController.doesUserExist
 );
 

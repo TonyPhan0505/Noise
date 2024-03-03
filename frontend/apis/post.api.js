@@ -45,14 +45,13 @@ export const searchMore = async (keyword, prevPostIds) => {
     return response;
 };
 
-export const update = async (postId, writing, media, mediaTypes, tags) => {
+export const update = async (postId, writing, media, tags) => {
     const accessToken = AsyncStorage.getItem('accessToken');
     const response = await axios.put(`${backendURL}/post/update`, {
         accessToken: accessToken,
         postId: postId,
         writing: writing,
         media: media,
-        mediaTypes: mediaTypes,
         tags: tags
     }).then(
         res => { return res; }
@@ -62,7 +61,7 @@ export const update = async (postId, writing, media, mediaTypes, tags) => {
     return response;
 };
 
-export const create = async (postId, username, year, month, day, hour, minute, writing, media, mediaTypes, tags, storyId) => {
+export const create = async (postId, username, year, month, day, hour, minute, writing, media, tags, storyId) => {
     const accessToken = AsyncStorage.getItem('accessToken');
     const response = await axios.post(`${backendURL}/post/create`, {
         accessToken: accessToken,
@@ -75,7 +74,6 @@ export const create = async (postId, username, year, month, day, hour, minute, w
         minute: minute,
         writing: writing,
         media: media,
-        mediaTypes: mediaTypes,
         tags: tags,
         storyId: storyId
     }).then(

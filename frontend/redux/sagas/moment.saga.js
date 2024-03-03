@@ -57,14 +57,12 @@ function* updateSaga(action) {
     const {
         momentId, 
         writing, 
-        media, 
-        mediaTypes
+        media
     } = action.payload;
     const res = yield update(
         momentId, 
         writing, 
-        media, 
-        mediaTypes
+        media
     );
     if (res && res.data.success) {
         const moment = res.data.moment;
@@ -96,8 +94,7 @@ function* createSaga(action) {
         hour, 
         minute, 
         writing, 
-        media, 
-        mediaTypes
+        media
     } = action.payload;
     const res = yield create(
         momentId, 
@@ -108,8 +105,7 @@ function* createSaga(action) {
         hour, 
         minute, 
         writing, 
-        media, 
-        mediaTypes
+        media
     );
     if (res && res.data.success) {
         const moment = res.data.moment;

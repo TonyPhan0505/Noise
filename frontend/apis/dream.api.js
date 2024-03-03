@@ -18,14 +18,13 @@ export const get = async (username) => {
     return response;
 };
 
-export const update = async (dreamId, name, media, mediaTypes, details, status) => {
+export const update = async (dreamId, name, media, details, status) => {
     const accessToken = AsyncStorage.getItem('accessToken');
     const response = await axios.put(`${backendURL}/dream/update`, {
         accessToken: accessToken,
         dreamId: dreamId,
         name: name,
         media: media,
-        mediaTypes: mediaTypes,
         details: details,
         status: status
     }).then(
@@ -36,14 +35,13 @@ export const update = async (dreamId, name, media, mediaTypes, details, status) 
     return response;
 };
 
-export const create = async (id, name, media, mediaTypes, details, status, username) => {
+export const create = async (id, name, media, details, status, username) => {
     const accessToken = AsyncStorage.getItem('accessToken');
     const response = await axios.post(`${backendURL}/dream/create`, {
         accessToken: accessToken,
         id: id,
         name: name,
         media: media,
-        mediaTypes: mediaTypes,
         details: details,
         status: status,
         username: username

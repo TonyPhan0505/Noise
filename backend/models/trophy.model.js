@@ -39,11 +39,6 @@ const TrophySchema = new Schema({
         required: true,
         default: []
     },
-    mediaTypes: {
-        type: [String],
-        required: true,
-        default: []
-    },
     writing: {
         type: String,
         required: true,

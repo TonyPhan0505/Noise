@@ -45,14 +45,13 @@ export const searchMore = async (keyword, prevTrophyIds) => {
     return response;
 };
 
-export const update = async (trophyId, title, media, mediaTypes, writing) => {
+export const update = async (trophyId, title, media, writing) => {
     const accessToken = AsyncStorage.getItem('accessToken');
     const response = await axios.put(`${backendURL}/trophy/update`, {
         accessToken: accessToken,
         trophyId: trophyId,
         title: title,
         media: media,
-        mediaTypes: mediaTypes,
         writing: writing
     }).then(
         res => { return res; }
@@ -62,7 +61,7 @@ export const update = async (trophyId, title, media, mediaTypes, writing) => {
     return response;
 };
 
-export const create = async (trophyId, title, month, year, storyId, usernames, media, mediaTypes, writing) => {
+export const create = async (trophyId, title, month, year, storyId, usernames, media, writing) => {
     const accessToken = AsyncStorage.getItem('accessToken');
     const response = await axios.post(`${backendURL}/trophy/create`, {
         accessToken: accessToken,
@@ -73,7 +72,6 @@ export const create = async (trophyId, title, month, year, storyId, usernames, m
         storyId: storyId,
         usernames: usernames,
         media: media,
-        mediaTypes: mediaTypes,
         writing: writing
     }).then(
         res => { return res; }

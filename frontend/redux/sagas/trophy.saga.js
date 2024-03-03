@@ -109,15 +109,13 @@ function* updateSaga(action) {
     const {
         trophyId, 
         title, 
-        media, 
-        mediaTypes, 
+        media,
         writing
     } = action.payload;
     const res = yield update(
         trophyId, 
         title, 
-        media, 
-        mediaTypes, 
+        media,
         writing
     );
     if (res && res.data.success) {
@@ -148,8 +146,7 @@ function* createSaga(action) {
         year, 
         storyId, 
         usernames, 
-        media, 
-        mediaTypes, 
+        media,
         writing
     } = action.payload;
     const res = yield create(
@@ -159,8 +156,7 @@ function* createSaga(action) {
         year, 
         storyId, 
         usernames, 
-        media, 
-        mediaTypes, 
+        media,
         writing
     );
     if (res && res.data.success) {

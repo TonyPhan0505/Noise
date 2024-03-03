@@ -39,11 +39,9 @@ exports.update = (req, res) => {
     const momentId = req.body.momentId;
     const writing = req.body.writing;
     const media = req.body.media;
-    const mediaTypes = req.body.mediaTypes;
     Moment.updateOne({ id: momentId }, {
         writing: writing,
-        media: media,
-        mediaTypes: mediaTypes
+        media: media
     }).then(
         async () => {
             const moment = await Moment.findOne({ id: momentId });
@@ -66,7 +64,6 @@ exports.create = (req, res) => {
     const minute = req.body.minute;
     const writing = req.body.writing;
     const media = req.body.media;
-    const mediaTypes = req.body.mediaTypes;
     const newMoment = new Moment({
         id: momentId,
         username: username,
@@ -76,8 +73,7 @@ exports.create = (req, res) => {
         hour: hour,
         minute: minute,
         writing: writing,
-        media: media,
-        mediaTypes: mediaTypes
+        media: media
     });
     newMoment.save().then(
         async (moment) => {

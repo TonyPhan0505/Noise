@@ -23,7 +23,6 @@ exports.update = async (req, res) => {
     const dreamId = req.body.dreamId;
     const name = req.body.name;
     const media = req.body.media;
-    const mediaTypes = req.body.mediaTypes;
     const details = req.body.details;
     const status = req.body.status;
     const dream = await Dream.findOne({ id: dreamId });
@@ -40,7 +39,7 @@ exports.update = async (req, res) => {
         if (toBeDeletedMedia.length > 0) {
             for (let i = 0; i < dream.media.length; i++) {
                 if (toBeDeletedMedia.includes(dream.media[i])) {
-                    await deleteMedium(dream.media[i], dream.mediaTypes[i]);
+                    await deleteMedium(dream.media[i]);
                 }
             }
         }
@@ -48,7 +47,6 @@ exports.update = async (req, res) => {
     Dream.updateOne({ id: dreamId }, {
         name: name,
         media: media,
-        mediaTypes: mediaTypes,
         details: details,
         status: status
     }).then(
@@ -67,7 +65,6 @@ exports.create = async (req, res) => {
     const id = req.body.id;
     const name = req.body.name;
     let media = req.body.media;
-    const mediaTypes = req.body.mediaTypes;
     const details = req.body.details;
     const status = req.body.status;
     const username = req.body.username;
@@ -79,7 +76,6 @@ exports.create = async (req, res) => {
         id: id,
         name: name,
         media: media,
-        mediaTypes: mediaTypes,
         details: details,
         status: status,
         username: username
@@ -103,7 +99,7 @@ exports.delete = async (req, res) => {
     const username = req.body.username;
     const dream = await Dream.findOne({ id: dreamId });
     for (let i = 0; i < dream.media.length; i++) {
-        await deleteMedium(dream.media[i], dream.mediaTypes[i]);
+        await deleteMedium(dream.media[i]);
     }
     Dream.deleteOne({ id: dreamId }).then(
         async () => {

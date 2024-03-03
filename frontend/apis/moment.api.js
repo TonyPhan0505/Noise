@@ -18,14 +18,13 @@ export const get = async (username) => {
     return response;
 };
 
-export const update = async (momentId, writing, media, mediaTypes) => {
+export const update = async (momentId, writing, media) => {
     const accessToken = AsyncStorage.getItem('accessToken');
     const response = await axios.put(`${backendURL}/moment/update`, {
         accessToken: accessToken,
         momentId: momentId,
         writing: writing,
-        media: media,
-        mediaTypes: mediaTypes
+        media: media
     }).then(
         res => { return res; }
     ).catch(
@@ -34,7 +33,7 @@ export const update = async (momentId, writing, media, mediaTypes) => {
     return response;
 };
 
-export const create = async (momentId, username, year, month, day, hour, minute, writing, media, mediaTypes) => {
+export const create = async (momentId, username, year, month, day, hour, minute, writing, media) => {
     const accessToken = AsyncStorage.getItem('accessToken');
     const response = await axios.post(`${backendURL}/moment/create`, {
         accessToken: accessToken,
@@ -46,8 +45,7 @@ export const create = async (momentId, username, year, month, day, hour, minute,
         hour: hour,
         minute: minute,
         writing: writing,
-        media: media,
-        mediaTypes: mediaTypes
+        media: media
     }).then(
         res => { return res; }
     ).catch(

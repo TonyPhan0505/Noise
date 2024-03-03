@@ -21,11 +21,6 @@ const DreamSchema = new Schema({
         required: true,
         default: []
     },
-    mediaTypes: {
-        type: [String],
-        required: true,
-        default: []
-    },
     details: {
         type: String,
         required: true,

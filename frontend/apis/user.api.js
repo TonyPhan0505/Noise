@@ -46,9 +46,7 @@ export const searchMoreUsersWithInterestX = async (interestName, prevUsernames) 
 };
 
 export const doesUserExist = async (emailAddress, username) => {
-    const accessToken = AsyncStorage.getItem('accessToken');
     const response = await axios.post(`${backendURL}/user/doesUserExist`, {
-        accessToken: accessToken,
         emailAddress: emailAddress,
         username: username
     }).then(

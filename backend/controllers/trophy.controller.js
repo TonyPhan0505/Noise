@@ -60,12 +60,10 @@ exports.update = (req, res) => {
     const trophyId = req.body.trophyId;
     const title = req.body.title;
     const media = req.body.media;
-    const mediaTypes = req.body.mediaTypes;
     const writing = req.body.writing;
     Trophy.updateOne({ id: trophyId }, {
         title: title,
         media: media,
-        mediaTypes: mediaTypes,
         writing: writing
     }).then(
         async () => {
@@ -87,7 +85,6 @@ exports.create = (req, res) => {
     const storyId = req.body.storyId;
     const usernames = req.body.usernames;
     const media = req.body.media;
-    const mediaTypes = req.body.mediaTypes;
     const writing = req.body.writing;
     const newTrophy = new Trophy({
         id: trophyId,
@@ -97,7 +94,6 @@ exports.create = (req, res) => {
         storyId: storyId,
         usernames: usernames,
         media: media,
-        mediaTypes: mediaTypes,
         writing: writing
     });
     newTrophy.save().then(

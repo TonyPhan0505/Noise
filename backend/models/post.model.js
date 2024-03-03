@@ -46,11 +46,6 @@ const PostSchema = new Schema({
         required: true,
         default: []
     },
-    mediaTypes: {
-        type: [String],
-        required: true,
-        default: []
-    },
     tags: {
         type: [String],
         required: true,

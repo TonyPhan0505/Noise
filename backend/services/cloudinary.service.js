@@ -1,4 +1,5 @@
 const cloudinary = require('cloudinary').v2;
+const fs = require('fs');
 
 cloudinary.config({
     cloud_name: process.env.CLOUD_NAME,
@@ -7,20 +8,16 @@ cloudinary.config({
 });
 
 const uploadMedium = async (medium) => {
+    const imageData = await fs.promises.readFile(medium.replace('file://', ''), { encoding: 'base64' });
     const result = await cloudinary.uploader.upload(
-        medium,
+        `data:image/jpeg;base64,${imageData}`,
         { folder: "noise" }
     );
-    return result;
+    return result.secure_url;
 };
 
-const deleteMedium = async (mediumSecuredUrl, mediumType) => {
-    let publicId;
-    if (mediumType === "image") {
-        publicId = 'noise/' + mediumSecuredUrl.match(/v\d+\/noise\/(.+)\.jpg$/)[1];
-    } else {
-        publicId = 'noise/' + mediumSecuredUrl.match(/v\d+\/noise\/(.+)\.mp4$/)[1];
-    }
+const deleteMedium = async (mediumSecuredUrl) => {
+    const publicId = 'noise/' + mediumSecuredUrl.match(/v\d+\/noise\/(.+)\.jpg$/)[1];
     await cloudinary.uploader.destroy(publicId);
 };
 

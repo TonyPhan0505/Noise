@@ -52,12 +52,10 @@ exports.update = (req, res) => {
     const postId = req.body.postId;
     const writing = req.body.writing;
     const media = req.body.media;
-    const mediaTypes = req.body.mediaTypes;
     const tags = req.body.tags;
     Post.updateOne({ id: postId }, {
         writing: writing,
         media: media,
-        mediaTypes: mediaTypes,
         tags: tags
     }).then(
         async () => {
@@ -81,7 +79,6 @@ exports.create = (req, res) => {
     const minute = req.body.minute;
     const writing = req.body.writing;
     const media = req.body.media;
-    const mediaTypes = req.body.mediaTypes;
     const tags = req.body.tags;
     const storyId = req.body.storyId;
     const newPost = new Post({
@@ -94,7 +91,6 @@ exports.create = (req, res) => {
         minute: minute,
         writing: writing,
         media: media,
-        mediaTypes: mediaTypes,
         tags: tags,
         storyId: storyId
     });

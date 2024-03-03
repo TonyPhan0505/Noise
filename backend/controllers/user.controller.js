@@ -342,7 +342,7 @@ exports.deleteAccount = async (req, res) => {
         await deleteTrophyRecords(username);
         await deleteViewRecords(username);
         const user = await User.findOne({ username: username });
-        await deleteMedium(user.profileAvatar, "image");
+        await deleteMedium(user.profileAvatar);
         return res.status(200).json({ success: true, message: `Successfully deleted ${username}'s account from the database.` });
     } catch (err) {
         return res.status(500).json({ success: false, message: `Failed to delete ${username}'s account from the database.` });
@@ -367,11 +367,8 @@ const deleteDreamRecords = async (username) => {
     const mediaRelatedToDreams = dreams.map((dream) => {
         return dream.media;
     }).flat();
-    const mediaTypesRelatedToDreams = dreams.map((dream) => {
-        return dream.mediaTypes;
-    }).flat();
     for (let i = 0; i < mediaRelatedToDreams.length; i++) {
-        await deleteMedium(mediaRelatedToDreams[i], mediaTypesRelatedToDreams[i]);
+        await deleteMedium(mediaRelatedToDreams[i]);
     }
     await Dream.deleteMany({ username: username });
 };
@@ -381,11 +378,8 @@ const deleteMomentRecords = async (username) => {
     const mediaRelatedToMoments = moments.map((moment) => {
         return moment.media;
     }).flat();
-    const mediaTypesRelatedToMoments = moments.map((moment) => {
-        return moment.mediaTypes;
-    }).flat();
     for (let i = 0; i < mediaRelatedToMoments.length; i++) {
-        await deleteMedium(mediaRelatedToMoments[i], mediaTypesRelatedToMoments[i]);
+        await deleteMedium(mediaRelatedToMoments[i]);
     }
     const commentIdsRelatedToMoments = moments.map((moment) => {
         return moment.comments;
@@ -403,11 +397,8 @@ const deletePostRecords = async (username) => {
     const mediaRelatedToPosts = posts.map((post) => {
         return post.media;
     }).flat();
-    const mediaTypesRelatedToPosts = posts.map((post) => {
-        return post.mediaTypes;
-    }).flat();
     for (let i = 0; i < mediaRelatedToPosts.length; i++) {
-        await deleteMedium(mediaRelatedToPosts[i], mediaTypesRelatedToPosts[i]);
+        await deleteMedium(mediaRelatedToPosts[i]);
     }
     const commentIdsRelatedToPosts = posts.map((post) => {
         return post.comments;
@@ -444,7 +435,7 @@ const deleteTrophyRecords = async (username) => {
             await trophy.save();
         } else {
             for (let i = 0; i < trophy.media.length; i++) {
-                await deleteMedium(trophy.media[i], trophy.mediaTypes[i]);
+                await deleteMedium(trophy.media[i]);
             }
             await trophy.remove();
         }

@@ -115,15 +115,13 @@ function* updateSaga(action) {
     const { 
         postId, 
         writing, 
-        media, 
-        mediaTypes, 
+        media,
         tags
     } = action.payload;
     const res = yield update(
         postId, 
         writing, 
-        media, 
-        mediaTypes, 
+        media,
         tags
     );
     if (res && res.data.success) {
@@ -157,7 +155,6 @@ function* createSaga(action) {
         minute, 
         writing, 
         media, 
-        mediaTypes, 
         tags, 
         storyId
     } = action.payload;
@@ -170,8 +167,7 @@ function* createSaga(action) {
         hour, 
         minute, 
         writing, 
-        media, 
-        mediaTypes, 
+        media,
         tags, 
         storyId
     );

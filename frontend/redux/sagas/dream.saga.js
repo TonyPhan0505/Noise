@@ -52,7 +52,6 @@ function* updateSaga(action) {
         dreamId, 
         name, 
         media, 
-        mediaTypes, 
         details, 
         status
     } = action.payload;
@@ -60,7 +59,6 @@ function* updateSaga(action) {
         dreamId, 
         name, 
         media, 
-        mediaTypes, 
         details, 
         status
     );
@@ -89,7 +87,6 @@ function* createSaga(action) {
         id, 
         name, 
         media, 
-        mediaTypes, 
         details, 
         status, 
         username
@@ -98,7 +95,6 @@ function* createSaga(action) {
         id, 
         name, 
         media, 
-        mediaTypes, 
         details, 
         status, 
         username
