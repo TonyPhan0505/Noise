@@ -14,10 +14,14 @@ function generateVerificationCode() {
 
 module.exports = (emailAddress) => {
     const code = generateVerificationCode();
-    sendEmail(
-        emailAddress,
-        "Account Verification",
-        `Hello,\n\nYour verification code is ${code}.\n\nBest regards,\nNoise`
-    );
+    try {
+        sendEmail(
+            emailAddress,
+            "Account Verification",
+            `Hello,\n\nYour verification code is ${code}.\n\nBest regards,\nNoise`
+        );
+    } catch (err) {
+        console.log("ERROR: Failed to send email.");
+    }
     return code;
 };

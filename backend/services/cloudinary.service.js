@@ -8,17 +8,26 @@ cloudinary.config({
 });
 
 const uploadMedium = async (medium) => {
-    const imageData = await fs.promises.readFile(medium.replace('file://', ''), { encoding: 'base64' });
-    const result = await cloudinary.uploader.upload(
-        `data:image/jpeg;base64,${imageData}`,
-        { folder: "noise" }
-    );
-    return result.secure_url;
+    try {
+        const imageData = await fs.promises.readFile(medium.replace('file://', ''), { encoding: 'base64' });
+        const result = await cloudinary.uploader.upload(
+            `data:image/jpeg;base64,${imageData}`,
+            { folder: "noise" }
+        );
+        return result.secure_url;
+    } catch (err) {
+        console.log("ERROR: Failed to store image in Cloudinary.");
+        return null;
+    }
 };
 
 const deleteMedium = async (mediumSecuredUrl) => {
-    const publicId = 'noise/' + mediumSecuredUrl.match(/v\d+\/noise\/(.+)\.jpg$/)[1];
-    await cloudinary.uploader.destroy(publicId);
+    try {
+        const publicId = 'noise/' + mediumSecuredUrl.match(/v\d+\/noise\/(.+)\.jpg$/)[1];
+        await cloudinary.uploader.destroy(publicId);
+    } catch (err) {
+        console.log("ERROR: Failed to delete image from Cloudinary.");
+    }
 };
 
 module.exports = { cloudinary, uploadMedium, deleteMedium };
